@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -92,9 +93,9 @@ public class SMSProcessor {
 			
 			else
 			{
-				phoneNo = m.group(0).toString();
+				String no = ((MatchResult) m).group(0).toString();
 				
-				m.setBody(m.getBody().replace(phoneNo, ""));
+				m.setBody(m.getBody().replace(no, ""));
 				
 				String file = "/Users/danayaliftikhar/Desktop/textwords.csv";
 				String line = "";
@@ -115,7 +116,7 @@ public class SMSProcessor {
 						}
 					JOptionPane.showMessageDialog(null, m.getBody());
 					
-					SMS sms = new SMS(m.getHeader(), m.getBody(), phoneNo);
+					SMS sms = new SMS(m.getHeader(), m.getBody(), no);
 					}
 					catch(IOException ex) {
 						ex.printStackTrace();
@@ -124,4 +125,4 @@ public class SMSProcessor {
 			}
 		}
 	}
-}
+
