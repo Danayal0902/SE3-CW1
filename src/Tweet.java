@@ -1,6 +1,8 @@
 import java.util.LinkedList;
 
 public class Tweet extends Message{
+	
+	
 
 	public Tweet(String header, String sender, String body, LinkedList<String> hashtag, LinkedList<String> twitterID) {
 		super(header, body); //inherits values from super class

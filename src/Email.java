@@ -1,6 +1,8 @@
 import java.util.LinkedList;
 
 public class Email extends Message{
+	
+	
 
 	public Email(String header, String sender, String subject, String body, LinkedList<String>url) {
 		super(header, body); //inherits values from super class

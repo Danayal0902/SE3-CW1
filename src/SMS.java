@@ -1,5 +1,7 @@
 
 public class SMS extends Message{
+	
+	
 
 	public SMS(String no, String header, String body) {
 		super(header, body); //inherits these values from the Message class

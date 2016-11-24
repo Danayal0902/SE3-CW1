@@ -4,6 +4,8 @@ import javax.swing.JOptionPane;
 
 public class MessageProcessor {
 	
+	public MessageProcessor() {}
+	
 	//singleton class with a unique instance variable
 	private static MessageProcessor uniqueInstance;
 	
