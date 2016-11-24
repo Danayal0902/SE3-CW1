@@ -24,7 +24,7 @@ public class QuarantineMessage extends Message{
 		
 		
 		try {
-			FileWriter fw = new FileWriter("/Users/danayaliftikhar/Desktop/SE3CW1/QuarantineMessages" + fileName + ".txt");
+			FileWriter fw = new FileWriter("/SE3CW1/QuarantineMessages/" + fileName + ".txt");
 			fw.write(obj.toJSONString());
 			fw.flush();
 			fw.close();

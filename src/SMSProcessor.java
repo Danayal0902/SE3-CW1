@@ -34,7 +34,7 @@ public class SMSProcessor {
 		
 		JSONParser parser = new JSONParser();
 		
-		File f = new File("/Users/danayaliftikhar/Desktop/SE3CW1/InitialSMS"); //creates a new file at specified path
+		File f = new File("/SE3CW1/InitialSMS"); //creates a new file at specified path
 		
 		File[] listFiles = f.listFiles();
 		

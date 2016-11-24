@@ -4,13 +4,17 @@ import org.json.simple.JSONObject;
 
 public class Message {
 	
+	public Message() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	//creates message instance
 	public Message(String header, String body) {
 		this.setHeader(header);
 		this.setBody(body);
-		
 	}
 	
+
 	//outputs a message in JSON format into a file
 	@SuppressWarnings("unchecked")
 	public void JSONMessage(String fileName) {
@@ -22,7 +26,7 @@ public class Message {
 		
 		
 		try {
-			FileWriter fw = new FileWriter("/Users/danayaliftikhar/Desktop/SE3CW1/InitialMessages" + fileName + ".txt");
+			FileWriter fw = new FileWriter("/SE3CW1/InitialMessages/" + fileName + ".txt");
 			fw.write(obj.toJSONString());
 			fw.flush();
 			fw.close();
