@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
+
 import javax.swing.JOptionPane;
 
 public class MessageProcessor {
@@ -32,8 +34,13 @@ public class MessageProcessor {
 			if(message.getHeader().substring(0,1).toUpperCase().contains("S") == true) {
 				
 				if(message.getBody().length() <141) {
-				message.JSONMessage("SMS" + message.getHeader()); //converts message to JSON format to output to file
-				SMS.add(message);
+					message.JSONMessage("SMS" + message.getHeader()); //converts message to JSON format to output to file
+					SMS.add(message);
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(new JFrame(), "SMS may be up to 140 characters and include a phone number, please try again.");
+
 				}
 			}
 			
