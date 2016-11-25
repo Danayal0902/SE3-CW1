@@ -26,7 +26,7 @@ public class Message {
 		
 		
 		try {
-			FileWriter fw = new FileWriter("/SE3CW1/InitialMessages/" + fileName + ".txt");
+			FileWriter fw = new FileWriter(fileName + ".txt");
 			fw.write(obj.toJSONString());
 			fw.flush();
 			fw.close();

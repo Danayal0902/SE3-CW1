@@ -68,14 +68,15 @@ public class MessageWindow extends JFrame {
 		btnSendMessage.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				MessageProcessor mp = new MessageProcessor();
+				MessageProcessor mp = new MessageProcessor(); //creates a new message processor object
 				
-				Message m = new Message();
+				//the message object becomes the contents of the header and body
+				Message m = new Message(txtHeader.getText(), txtBody.getText()); 
 				
+				//process the message and output to file in src
 				mp.ProcessMessage(m);
 				
-				String fileName = "SMS1";
-				m.JSONMessage(fileName);
+				
 			}
 		});
 		
