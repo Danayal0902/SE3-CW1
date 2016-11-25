@@ -47,14 +47,14 @@ public class MessageProcessor {
 			
 			if(message.getHeader().substring(0,1).toUpperCase().contains("T") == true) {
 				
-				if(message.getBody().length() <141) {
+				if(message.getBody().length() <141 && message.getBody().contains("@")) {
 					message.JSONMessage("Tweet" + message.getHeader());
 					Tweet.add(message);
 				}
 				
 				else
 				{
-					JOptionPane.showMessageDialog(new JFrame(), "Tweets may be up to 140 characters, please try again.");
+					JOptionPane.showMessageDialog(new JFrame(), "Tweets may be up to 140 characters and include a twitter ID, please try again.");
 				}
 			}
 		}
