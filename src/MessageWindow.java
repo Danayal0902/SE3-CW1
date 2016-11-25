@@ -93,5 +93,45 @@ public class MessageWindow extends JFrame {
 		lblNapier.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
 		lblNapier.setBounds(162, 28, 135, 34);
 		contentPane.add(lblNapier);
+		
+		JButton btnTweets = new JButton("Tweets");
+		btnTweets.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TweetWindow tweet = new TweetWindow(); //create new window object
+				
+				setVisible(false); //hides this window
+				
+				tweet.setVisible(true); //opens the next window
+				
+		        }	
+		});
+		btnTweets.setBounds(365, 212, 85, 29);
+		contentPane.add(btnTweets);
+		
+		JButton btnEmails = new JButton("Emails");
+		btnEmails.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				EmailWindow email = new EmailWindow(); //create new window object
+				
+				setVisible(false); //hides this window
+				
+				email.setVisible(true); //opens the next window
+			}
+		});
+		btnEmails.setBounds(365, 243, 85, 29);
+		contentPane.add(btnEmails);
+		
+		JButton btnSms = new JButton("SMS");
+		btnSms.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SMSWindow sms = new SMSWindow(); //create new window object
+				
+				setVisible(false); //hides this window
+				
+				sms.setVisible(true); //opens the next window
+			}
+		});
+		btnSms.setBounds(365, 181, 85, 29);
+		contentPane.add(btnSms);
 	}
 }
