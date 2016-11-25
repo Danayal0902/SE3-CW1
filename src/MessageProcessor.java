@@ -28,12 +28,14 @@ public class MessageProcessor {
 	
 	public void ProcessMessage (Message message) { //method that will take the input message and process it
 		
+		
 		if(message.getHeader().length() == 10) { //detects the message type from the header to filter it
 			
 			//if statements that hold the message type constraint and add them to the correct array list
 			if(message.getHeader().substring(0,1).toUpperCase().contains("S") == true) {
 				
 				if(message.getBody().length() <141) {
+					
 					message.JSONMessage("SMS" + message.getHeader()); //converts message to JSON format to output to file
 					SMS.add(message);
 				}

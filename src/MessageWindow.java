@@ -77,7 +77,7 @@ public class MessageWindow extends JFrame {
 				//process the message and output to file in src
 				mp.ProcessMessage(m);
 				
-				System.out.println("Your following message has been sent" + m.getHeader());
+				System.out.println("Your following message has been sent " + m.getHeader());
 				
 				
 				
